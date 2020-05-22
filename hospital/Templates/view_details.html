@@ -1,0 +1,64 @@
+{% extends "base.html" %}
+
+{% block body %}
+
+<div class="row">
+	<div class="col-md-12">
+		<br>
+		<h1> General Patient Details </h1>
+		<br>
+		<table class="table">
+			<thead class="thead-dark">
+				<tr>
+					<th scope="col">Gender</th>
+					<th scope="col">First Name</th>
+					<th scope="col">Last Name</th>
+					<th scope="col">DOB</th>
+					<th scope="col">Height (cm's)</th>
+					<th scope="col">Weight (kg's)</th>
+					<th scope="col">Email</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr>
+						<td>{{general_data.pGender}}</td>
+						<td>{{general_data.pFname}}</td>
+						<td>{{general_data.pLname}}</td>
+						<td>{{general_data.pDOB}}</td>
+						<td>{{general_data.pHeight}}</td>
+						<td>{{general_data.pWeight}}</td>
+						<td>{{general_data.pEmail}}</td>
+				</tr>
+			</tbody>
+		</table>
+	</div>
+</div>
+
+
+<div class="row">
+	<div class="col-md-12">
+		<br>
+		<h1> Patient Medical History </h1>
+		<br>
+		<table class="table">
+			<thead class="thead-dark">
+				<tr>
+					<th scope="col">Drugs Allergic To</th>
+					<th scope="col">Disease History</th>
+					<th scope="col">Current Medication</th>
+					<th scope="col">Comments</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr>
+						<td>{{medical_data.drugList}}</td>
+						<td>{{medical_data.disList}}</td>
+						<td>{{medical_data.curMed}}</td>
+						<td>{{medical_data.comments}}</td>
+				</tr>
+			</tbody>
+		</table>
+	</div>
+</div>
+
+{% endblock %}

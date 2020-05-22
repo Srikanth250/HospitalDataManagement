@@ -1,0 +1,17 @@
+{% extends "base.html" %}
+
+{% block body %}
+	
+	 <br><br>
+	 <a href="/logout/" class="btn btn-outline-warning float-right">Logout </a>
+	 <div class="text-center">
+		<h1> Welcome, <span style="color:orange"> {{user}} </span></h1>
+		<br><br><br><br>
+		
+		<p><a href="/upload/" class="btn btn-success"> Upload Patient Details </a></p>
+		<br><br>
+		
+		<a href="/view/" class="btn btn-warning"> View patient Details </a>
+	 </div>
+
+{% endblock %}

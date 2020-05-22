@@ -1,0 +1,56 @@
+{% extends "base.html" %}
+
+{% block body %}
+	
+	<br>
+	<h1> General Patient Information </h1>
+	<hr>
+	<form action="/general_info/" method="POST">
+	{% csrf_token %}
+		
+	<p><label> Patient Gender <span style="color:red">*</span> </label></p>
+	<p>
+		<select name="pgender">
+			<option > Male </option>
+			<option> Female </option>
+			<option selected> Prefer not to say </option>
+		</select>
+	</p>
+	<br>
+	
+	<p><label> Patient Name <span style="color:red">*</span> </label></p>
+	<p>
+		<small name="pfname" class="form-text text-muted">First Name of Every Patient Should be Always Unique</small>
+		<input type="text" name="pfname" placeholder="first name"></input>
+		
+		<input type="text" name="plname" placeholder="last name" style="position:relative;left:10px;"></input>
+	</p>
+	<br>
+	
+	<p><label> Patient Birth Date <span style="color:red">*</span> </label></p>
+		<p><input type="text" name="pdob" placeholder="ex: YYYY-MM-DD"></input></p>
+	<br>
+	
+	<p><label> Patient Height (cm's) <span style="color:red">*</span> </label></p>
+	<p>
+		<input type="text" name="pheight" placeholder="ex: 176"></input> 
+	</p>
+	<br>
+	
+	<p><label> Patient Weight (kg's) <span style="color:red">*</span> </label></p>
+	<p>
+		<input type="text" name="pweight" placeholder="ex: 65"></input> 
+	</p>
+	<br>
+	
+	<p><label> Patient E-mail <span style="color:red">*</span> </label></p>
+	<p>
+		<input type="email" name="pemail" placeholder="ex: myname@gmail.com"></input> 
+	</p>
+	<br>
+	
+	<button type="submit" class="btn btn-success"> Submit & Proceed To Next Section </button>
+	</form>
+
+
+{% endblock %}
